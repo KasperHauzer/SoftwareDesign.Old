@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StartUp", "StartUp\StartUp.csproj", "{75AF9B26-B2C2-4419-A230-81EA28F026ED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstLab", "FirstLab\FirstLab.csproj", "{8CDC58C3-4B2E-4199-BBB0-86419D105B1B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,5 +15,9 @@ Global
 		{75AF9B26-B2C2-4419-A230-81EA28F026ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75AF9B26-B2C2-4419-A230-81EA28F026ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75AF9B26-B2C2-4419-A230-81EA28F026ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CDC58C3-4B2E-4199-BBB0-86419D105B1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CDC58C3-4B2E-4199-BBB0-86419D105B1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CDC58C3-4B2E-4199-BBB0-86419D105B1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CDC58C3-4B2E-4199-BBB0-86419D105B1B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
