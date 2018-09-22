@@ -10,7 +10,7 @@ namespace FirstLab.Identifiers
         /// <summary>
         /// Класс.
         /// </summary>
-        Class,
+        Class = 1,
 
         /// <summary>
         /// Константа.

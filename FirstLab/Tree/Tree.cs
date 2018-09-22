@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace FirstLab.Tree
 {
@@ -89,10 +90,10 @@ namespace FirstLab.Tree
 
         public IEnumerator GetEnumerator()
         {
-            T[] array = new T[Count];
-            ToArray(RealRoot.LogicRoot, ref array);
+            List<T> list = new List<T>();
+            ToList(RealRoot.LogicRoot, ref list);
 
-            foreach (T i in array)
+            foreach (T i in list)
                 yield return i;
         }
 
@@ -114,18 +115,18 @@ namespace FirstLab.Tree
 
             //Движемся до корневого элемента для добавляемого.
             while (point != null)
-                if (point.IsSheet && sheet < point) {
+                if (point.Left is null && sheet < point) {
                     point.Left = sheet;
-                    break;
+                    return true;
                 }
-                else if (point.IsSheet && sheet >= point) {
+                else if (point.Rigth is null && sheet >= point) {
                     point.Rigth = sheet;
-                    break;
+                    return true;
                 }
                 else if (sheet < point) point = point.Left;
                 else point = point.Rigth;
 
-            return true;
+            return false;
         }
 
         /// <summary>
@@ -151,16 +152,14 @@ namespace FirstLab.Tree
         /// <param name="rootItem">Корневой элемент дерева.</param>
         /// <param name="array">Массив, в который должны заноситься элементы из дерева.</param>
         /// <param name="beginingIndex">Начальный индекс элемента дерева (не может превышать общее число элементов в дереве).</param>
-        static void ToArray(TreeItem<T> rootItem, ref T[] array, Int32 beginingIndex = 0)
+        static void ToList(TreeItem<T> rootItem, ref List<T> list)
         {
-            if (rootItem is null ||
-                array is null ||
-                beginingIndex < 0) return;
+            if (rootItem is null) return;
 
             if (rootItem != null) {
-                if (rootItem.Left != null) ToArray(rootItem.Left, ref array, beginingIndex + 1);
-                if (rootItem.Rigth != null) ToArray(rootItem.Rigth, ref array, beginingIndex + 1);
-                array[beginingIndex++] = rootItem.Value;
+                list.Add(rootItem.Value);
+                if (rootItem.Left != null) ToList(rootItem.Left, ref list);
+                if (rootItem.Rigth != null) ToList(rootItem.Rigth, ref list);
             }
 
             return;

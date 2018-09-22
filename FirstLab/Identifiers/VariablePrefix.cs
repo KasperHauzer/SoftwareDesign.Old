@@ -10,7 +10,7 @@ namespace FirstLab.Identifiers
         /// <summary>
         /// Без префикса.
         /// </summary>
-        None,
+        None = 1,
 
         /// <summary>
         /// Выводимое значение.

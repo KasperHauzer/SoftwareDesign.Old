@@ -35,5 +35,10 @@ namespace FirstLab.Identifiers
             Name = name;
             IdType = idType;
         }
+
+        public override String ToString()
+        {
+            return $"{IdType} {Name}";
+        }
     }
 }

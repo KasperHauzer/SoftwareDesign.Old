@@ -10,7 +10,7 @@ namespace FirstLab.Identifiers
         /// <summary>
         /// Булев тип.
         /// </summary>
-        Bool,
+        Bool = 1,
 
         /// <summary>
         /// Литерал.
