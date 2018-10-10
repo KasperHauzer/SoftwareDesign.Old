@@ -1,4 +1,4 @@
-# Основные файлы и каталоги
+﻿# Основные файлы и каталоги
 .vs
 StartUp/bin
 StartUp/obj
@@ -6,3 +6,7 @@ StartUp/obj
 # Файлы первой лабораторной работы
 FirstLab/bin
 FirstLab/obj
+
+# Файла второй лабораторной работы
+MDIEasyPaint/bin
+MDIEasyPaint/obj
