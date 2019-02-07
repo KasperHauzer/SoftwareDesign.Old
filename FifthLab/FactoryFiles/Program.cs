@@ -37,16 +37,14 @@ namespace FifthLab
             //Xml сериализация в файл и обратно.
             var types = new Type[] {
                 typeof(Identifier),
-                typeof(Identifier),
-                typeof(Identifier),
-                typeof(Identifier),
-                typeof(Identifier),
-                typeof(Identifier),
-                typeof(Identifier),
+                typeof(Variable),
+                typeof(Constant),
+                typeof(Method),
+                typeof(Class)
             };
 
             using (var stream = new FileStream("output.txt", FileMode.OpenOrCreate)) {
-                new XmlSerializer(typeof(Tree<Identifier>), "FirstLab").Serialize(stream, tree);
+                new XmlSerializer(typeof(Tree<Identifier>), types).Serialize(stream, tree);
             }
 
 

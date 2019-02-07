@@ -15,7 +15,7 @@ namespace FirstLab.Identifiers
         /// <value>Возвращаемый тип.</value>
         public VariableType ReturnType {
             get;
-            private set;
+            set;
         }
 
         /// <summary>
@@ -24,7 +24,7 @@ namespace FirstLab.Identifiers
         /// <value>Список параметров.</value>
         public List<Identifier> Options {
             get;
-            private set;
+            set;
         }
 
         /// <summary>
@@ -49,5 +49,7 @@ namespace FirstLab.Identifiers
             ReturnType = returnType;
             Options = options;
         }
+
+        public Method() : this("", VariableType.Void) { }
     }
 }

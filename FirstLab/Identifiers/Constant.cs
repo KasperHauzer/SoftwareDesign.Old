@@ -14,7 +14,7 @@ namespace FirstLab.Identifiers
         /// <value>Значение константы.</value>
         public String Value {
             get;
-            private set;
+            set;
         }
 
         /// <summary>
@@ -23,7 +23,7 @@ namespace FirstLab.Identifiers
         /// <value>Тип константы.</value>
         public VariableType VarType {
             get;
-            private set;
+            set;
         }
 
         /// <summary>
@@ -37,5 +37,7 @@ namespace FirstLab.Identifiers
             Value = value;
             VarType = varType;
         }
+
+        public Constant() : this("", "", VariableType.Bool) { }
     }
 }

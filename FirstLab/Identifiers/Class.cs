@@ -13,5 +13,7 @@ namespace FirstLab.Identifiers
         /// </summary>
         /// <param name="name">Имя класса.</param>
         public Class(String name) : base(name, IdentifierType.Class) { }
+
+        public Class() : this("") { }
     }
 }

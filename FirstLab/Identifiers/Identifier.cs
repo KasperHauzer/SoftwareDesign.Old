@@ -14,7 +14,7 @@ namespace FirstLab.Identifiers
         /// <value>The name.</value>
         public String Name {
             get;
-            private set;
+            set;
         }
 
         /// <summary>
@@ -23,7 +23,7 @@ namespace FirstLab.Identifiers
         /// <value>Тип идентификатора.</value>
         public IdentifierType IdType {
             get;
-            private set;
+            set;
         }
 
         /// <summary>
@@ -36,6 +36,8 @@ namespace FirstLab.Identifiers
             Name = name;
             IdType = idType;
         }
+
+        public Identifier() : this("", IdentifierType.Variable) { }
 
         public override String ToString()
         {
