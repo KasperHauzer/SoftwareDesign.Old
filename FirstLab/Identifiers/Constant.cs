@@ -5,6 +5,7 @@ namespace FirstLab.Identifiers
     /// <summary>
     /// Идентификатор константы.
     /// </summary>
+    [Serializable]
     public class Constant : Identifier
     {
         /// <summary>

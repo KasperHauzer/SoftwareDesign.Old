@@ -5,6 +5,7 @@ namespace FirstLab.Tree
     /// <summary>
     /// Элемент бинарного дерева поиска <see cref="Tree"/>.
     /// </summary>
+    [Serializable]
     public class TreeItem<T>
     {
         TreeItem<T> _left, _rigth;

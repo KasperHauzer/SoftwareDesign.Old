@@ -5,6 +5,7 @@ namespace FirstLab.Identifiers
     /// <summary>
     /// Идентификатор переменной.
     /// </summary>
+    [Serializable]
     public class Variable : Identifier
     {
         /// <summary>
@@ -47,5 +48,7 @@ namespace FirstLab.Identifiers
             VarType = varType;
             VarPrefix = varPrefix;
         }
+
+        public Variable() : this("default", "NULL", VariableType.String, VariablePrefix.None) { }
     }
 }

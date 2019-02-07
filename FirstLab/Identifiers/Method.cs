@@ -6,6 +6,7 @@ namespace FirstLab.Identifiers
     /// <summary>
     /// Идентификатор метода.
     /// </summary>
+    [Serializable]
     public class Method : Identifier
     {
         /// <summary>

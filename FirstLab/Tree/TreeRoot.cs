@@ -5,6 +5,7 @@ namespace FirstLab.Tree
     /// <summary>
     /// Фактический корень бинарного дерева поиска <see cref="Tree"/>.
     /// </summary>
+    [Serializable]
     public class TreeRoot<T>
     {
         /// <summary>

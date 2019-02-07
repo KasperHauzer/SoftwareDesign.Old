@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Serialization;
 
 namespace FirstLab.Tree
 {
     /// <summary>
     /// Представляет бинарное дерево поиска.
     /// </summary>
+    [Serializable]
     public class Tree<T> : IEnumerable
     {
         /// <summary>
@@ -83,11 +85,16 @@ namespace FirstLab.Tree
             return false;
         }
 
+        public Boolean Add(Object item)
+        {
+            return Add((T)item);
+        }
+
         public override String ToString()
         {
             return $"Count {Count}";
         }
-
+        
         public IEnumerator GetEnumerator()
         {
             List<T> list = new List<T>();

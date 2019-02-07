@@ -5,6 +5,7 @@ namespace FirstLab.Identifiers
     /// <summary>
     /// Идентификатор класса.
     /// </summary>
+    [Serializable]
     public class Class : Identifier
     {
         /// <summary>
